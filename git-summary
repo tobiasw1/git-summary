@@ -112,6 +112,7 @@ git_summary() {
 	    summarize_one_git_repo $f "$template" "$local_only" "$quiet" >&1 &  # multiple bg jobs
 	else
 	    summarize_one_git_repo $f "$template" "$local_only" "$quiet" >&1    # sequentially
+	    sleep 0.25
 	fi
         (( repo_count+=1 ))
     done
